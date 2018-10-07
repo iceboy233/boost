@@ -22,6 +22,9 @@
 [submodule "upstream/bind"]
 	path = upstream/bind
 	url = https://github.com/boostorg/bind.git
+[submodule "upstream/circular_buffer"]
+	path = upstream/circular_buffer
+	url = https://github.com/boostorg/circular_buffer.git
 [submodule "upstream/chrono"]
 	path = upstream/chrono
 	url = https://github.com/boostorg/chrono.git
