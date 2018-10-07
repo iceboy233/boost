@@ -1,0 +1,18 @@
+This repository contains the boost library with bazel build rules.
+
+We recommend putting this repository in //third_party/boost, and then you can
+reference to individual boost libraries like:
+
+cc_binary(
+    # ...
+    deps = [
+        # ...
+        "//third_party/boost:asio",
+    ],
+)
+
+Pull requests to add more boost libraries or adding other ways of using these
+libraries are welcome.
+
+Currently pinned to boost-1.68.0. Tested under linux and Windows.
+
