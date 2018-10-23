@@ -121,6 +121,26 @@ boost_library(
 
 boost_library(
     name = "filesystem",
+    srcs = [
+        "upstream/filesystem/src/codecvt_error_category.cpp",
+        "upstream/filesystem/src/operations.cpp",
+        "upstream/filesystem/src/path_traits.cpp",
+        "upstream/filesystem/src/path.cpp",
+        "upstream/filesystem/src/portability.cpp",
+        "upstream/filesystem/src/unique_path.cpp",
+        "upstream/filesystem/src/utf8_codecvt_facet.cpp",
+        "upstream/filesystem/src/windows_file_codecvt.cpp",
+    ],
+    deps = [
+        ":config",
+        ":container_hash",
+        ":io",
+        ":iterator",
+        ":range",
+        ":smart_ptr",
+        ":system",
+        ":type_traits",
+    ],
 )
 
 boost_library(
@@ -165,6 +185,10 @@ boost_library(
 
 boost_library(
     name = "iterator",
+    deps = [
+        ":detail",
+        ":mpl",
+    ],
 )
 
 boost_library(
@@ -355,6 +379,7 @@ boost_library(
 
 boost_library(
     name = "smart_ptr",
+    deps = [":throw_exception"],
 )
 
 boost_library(
