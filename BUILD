@@ -80,6 +80,7 @@ boost_library(
 
 boost_library(
     name = "container",
+    deps = [":move"],
 )
 
 boost_library(
@@ -99,7 +100,12 @@ boost_library(
 
 boost_library(
     name = "date_time",
+    srcs = [
+        "upstream/date_time/src/gregorian/greg_month.cpp",
+    ],
     deps = [
+        ":io",
+        ":lexical_cast",
         ":mpl",
         ":numeric_conversion",
         ":smart_ptr",
@@ -196,6 +202,7 @@ boost_library(
     deps = [
         ":array",
         ":container",
+        ":integer",
         ":numeric_conversion",
         ":math",
         ":range",
@@ -379,7 +386,11 @@ boost_library(
 
 boost_library(
     name = "smart_ptr",
-    deps = [":throw_exception"],
+    deps = [
+        ":core",
+        ":predef",
+        ":throw_exception",
+    ],
 )
 
 boost_library(
@@ -464,6 +475,7 @@ boost_library(
 
 boost_library(
     name = "throw_exception",
+    deps = [":assert"],
 )
 
 boost_library(
