@@ -169,6 +169,9 @@
 [submodule "upstream/tokenizer"]
 	path = upstream/tokenizer
 	url = https://github.com/boostorg/tokenizer.git
+[submodule "upstream/tti"]
+	path = upstream/tti
+	url = https://github.com/boostorg/tti.git
 [submodule "upstream/tuple"]
 	path = upstream/tuple
 	url = https://github.com/boostorg/tuple.git
