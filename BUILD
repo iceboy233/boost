@@ -263,7 +263,10 @@ boost_library(
 
 boost_library(
     name = "mpl",
-    deps = [":preprocessor"],
+    deps = [
+        ":config",
+        ":preprocessor",
+    ],
 )
 
 boost_library(
@@ -396,8 +399,19 @@ boost_library(
 boost_library(
     name = "spirit",
     deps = [
+        ":assert",
+        ":core",
         ":foreach",
+        ":fusion",
+        ":math",
+        ":mpl",
+        ":optional",
+        ":range",
         ":regex",
+        ":smart_ptr",
+        ":tti",
+        ":type_traits",
+        ":utility",
         ":variant",
     ],
 )
@@ -483,6 +497,10 @@ boost_library(
 )
 
 boost_library(
+    name = "tti",
+)
+
+boost_library(
     name = "tuple",
 )
 
@@ -492,6 +510,7 @@ boost_library(
         ":container_hash",
         ":mpl",
         ":static_assert",
+        ":throw_exception",
     ],
 )
 
@@ -510,6 +529,10 @@ boost_library(
 
 boost_library(
     name = "variant",
+    deps = [
+        ":move",
+        ":type_index",
+    ],
 )
 
 boost_library(
