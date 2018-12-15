@@ -96,6 +96,7 @@ boost_library(
 
 boost_library(
     name = "core",
+    deps = [":config"],
 )
 
 boost_library(
@@ -280,6 +281,15 @@ boost_library(
 
 boost_library(
     name = "optional",
+    deps = [
+        ":assert",
+        ":core",
+        ":move",
+        ":static_assert",
+        ":throw_exception",
+        ":type_traits",
+        ":utility",
+    ],
 )
 
 boost_library(
@@ -525,6 +535,12 @@ boost_library(
 
 boost_library(
     name = "utility",
+    deps = [
+        ":config",
+        ":core",
+        ":preprocessor",
+        ":type_traits",
+    ],
 )
 
 boost_library(
