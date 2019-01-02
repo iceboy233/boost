@@ -548,6 +548,7 @@ boost_library(
     deps = [
         ":move",
         ":type_index",
+        ":utility",
     ],
 )
 
