@@ -314,6 +314,7 @@ boost_library(
 
 boost_library(
     name = "process",
+    deps = [":filesystem"],
 )
 
 boost_library(
