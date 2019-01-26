@@ -46,6 +46,11 @@ boost_library(
 
 boost_library(
     name = "atomic",
+    deps = [
+        ":assert",
+        ":config",
+        ":type_traits",
+    ],
 )
 
 boost_library(
