@@ -200,6 +200,17 @@ BOOST_LIBRARIES = [
     ),
 
     boost_library(
+        name = "icl",
+        deps = [
+            "assert",
+            "config",
+            "iterator",
+            "move",
+            "range",
+        ],
+    ),
+
+    boost_library(
         name = "integer",
     ),
 
@@ -216,6 +227,7 @@ BOOST_LIBRARIES = [
         deps = [
             "detail",
             "mpl",
+            "type_traits",
         ],
     ),
 
@@ -281,6 +293,10 @@ BOOST_LIBRARIES = [
 
     boost_library(
         name = "move",
+        deps = [
+            "core",
+            "static_assert",
+        ],
     ),
 
     boost_library(
