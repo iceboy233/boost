@@ -7,7 +7,7 @@ def boost_library(
     deps = None):
     return {
         'name': name,
-        'version': 'boost-1.69.0',
+        'version': 'boost-1.70.0',
         'srcs': srcs,
         'textual_hdrs': textual_hdrs,
         'defines': (defines or []) + ["BOOST_ALL_NO_LIB"],
@@ -269,7 +269,6 @@ BOOST_LIBRARIES = [
             "src/thread_id.cpp",
             "src/thread_specific.cpp",
             "src/trivial.cpp",
-            "src/unhandled_exception_count.cpp",
         ],
         deps = [
             "config",
