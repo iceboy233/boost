@@ -73,7 +73,9 @@ BOOST_LIBRARIES = [
         name = "beast",
         deps = [
             "intrusive",
+            "logic",
             "move",
+            "mp11",
             "optional",
         ],
     ),
@@ -286,6 +288,10 @@ BOOST_LIBRARIES = [
     ),
 
     boost_library(
+        name = "logic",
+    ),
+
+    boost_library(
         name = "math",
         deps = ["predef"],
     ),
@@ -296,6 +302,10 @@ BOOST_LIBRARIES = [
             "core",
             "static_assert",
         ],
+    ),
+
+    boost_library(
+        name = "mp11",
     ),
 
     boost_library(
