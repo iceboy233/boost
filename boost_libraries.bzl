@@ -387,6 +387,7 @@ BOOST_LIBRARIES = [
     boost_library(
         name = "property_tree",
         deps = [
+            "any",
             "format",
             "multi_index",
         ],
