@@ -14,7 +14,7 @@ def _get_repo_build_file_content(lib):
 
 cc_library(
     name = "{name}",
-    hdrs = native.glob([
+    hdrs = glob([
         "include/**/*.h",
         "include/**/*.hpp",
         "include/**/*.ipp",
