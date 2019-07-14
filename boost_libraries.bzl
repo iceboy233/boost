@@ -28,6 +28,17 @@ BOOST_LIBRARIES = [
     ),
 
     boost_library(
+        name = "align",
+        deps = [
+            "assert",
+            "config",
+            "core",
+            "static_assert",
+            "throw_exception",
+        ],
+    ),
+
+    boost_library(
         name = "any",
         deps = [
             "throw_exception",
@@ -103,7 +114,16 @@ BOOST_LIBRARIES = [
 
     boost_library(
         name = "container",
-        deps = ["move"],
+        deps = [
+            "assert",
+            "config",
+            "container_hash",
+            "core",
+            "intrusive",
+            "move",
+            "static_assert",
+            "type_traits",
+        ],
     ),
 
     boost_library(
@@ -202,6 +222,17 @@ BOOST_LIBRARIES = [
     ),
 
     boost_library(
+        name = "hana",
+	    deps = [
+	        "config",
+	        "core",
+	        "fusion",
+	        "mpl",
+	        "tuple",
+        ],
+    ),
+
+    boost_library(
         name = "icl",
         deps = [
             "assert",
@@ -247,6 +278,26 @@ BOOST_LIBRARIES = [
 
     boost_library(
         name = "locale",
+    ),
+
+    boost_library(
+        name = "lockfree",
+        deps = [
+            "align",
+            "array",
+            "assert",
+            "atomic",
+            "config",
+            "core",
+            "integer",
+            "mpl",
+            "parameter",
+            "predef",
+            "static_assert",
+            "tuple",
+            "type_traits",
+            "utility",
+        ],
     ),
 
     boost_library(
@@ -370,6 +421,7 @@ BOOST_LIBRARIES = [
             "src/convert.cpp",
             "src/options_description.cpp",
             "src/positional_options.cpp",
+            "src/split.cpp",
             "src/utf8_codecvt_facet.cpp",
             "src/value_semantic.cpp",
             "src/variables_map.cpp",
@@ -400,10 +452,21 @@ BOOST_LIBRARIES = [
     boost_library(
         name = "range",
         deps = [
+            "array",
+            "assert",
             "concept_check",
+            "config",
+            "container_hash",
+            "core",
+            "detail",
             "iterator",
             "mpl",
+            "numeric_conversion",
+            "optional",
             "preprocessor",
+            "regex",
+            "static_assert",
+            "tuple",
             "type_traits",
             "utility",
         ],
