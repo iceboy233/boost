@@ -223,12 +223,12 @@ BOOST_LIBRARIES = [
 
     boost_library(
         name = "hana",
-	    deps = [
-	        "config",
-	        "core",
-	        "fusion",
-	        "mpl",
-	        "tuple",
+        deps = [
+            "config",
+            "core",
+            "fusion",
+            "mpl",
+            "tuple",
         ],
     ),
 
