@@ -5,7 +5,7 @@ WORKSPACE file:
 
 git_repository(
     name = "org_boost_boost",
-    commit = "093cf917537878de8d18f71f8834bd2219e84fc2",
+    commit = "042ccce03fed57ab8b218500a22e1431ae8f3610",
     remote = "https://github.com/iceb0y/boost.git",
 )
 
