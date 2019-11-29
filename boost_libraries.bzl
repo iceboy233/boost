@@ -7,7 +7,7 @@ def boost_library(
     deps = None):
     return {
         'name': name,
-        'version': 'boost-1.70.0',
+        'version': 'boost-1.71.0',
         'srcs': srcs,
         'textual_hdrs': textual_hdrs,
         'defines': (defines or []) + ["BOOST_ALL_NO_LIB"],
@@ -330,6 +330,7 @@ BOOST_LIBRARIES = [
             "function_types",
             "intrusive",
             "locale",
+            "mp11",
             "parameter",
             "phoenix",
             "predef",
