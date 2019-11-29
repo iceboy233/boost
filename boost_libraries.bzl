@@ -329,6 +329,7 @@ BOOST_LIBRARIES = [
             "function_types",
             "intrusive",
             "locale",
+            "mp11",
             "parameter",
             "phoenix",
             "predef",
