@@ -89,6 +89,7 @@ BOOST_LIBRARIES = [
             "mp11",
             "optional",
         ],
+        defines = ["BOOST_BEAST_USE_STD_STRING_VIEW"],
     ),
 
     boost_library(
