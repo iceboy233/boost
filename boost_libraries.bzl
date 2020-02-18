@@ -413,7 +413,10 @@ BOOST_LIBRARIES = [
 
     boost_library(
         name = "process",
-        deps = ["filesystem"],
+        deps = [
+            "algorithm",
+            "filesystem",
+        ],
     ),
 
     boost_library(
