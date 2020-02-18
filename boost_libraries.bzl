@@ -22,6 +22,7 @@ BOOST_LIBRARIES = [
             "array",
             "assert",
             "core",
+            "function",
             "range",
             "static_assert",
         ],
