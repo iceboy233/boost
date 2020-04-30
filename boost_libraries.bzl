@@ -175,6 +175,8 @@ BOOST_LIBRARIES = [
         name = "filesystem",
         srcs = [
             "src/codecvt_error_category.cpp",
+            "src/directory.cpp",
+            "src/exception.cpp",
             "src/operations.cpp",
             "src/path_traits.cpp",
             "src/path.cpp",
