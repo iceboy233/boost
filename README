@@ -5,7 +5,7 @@ WORKSPACE file:
 
 git_repository(
     name = "org_boost_boost",
-    commit = "042ccce03fed57ab8b218500a22e1431ae8f3610",
+    commit = "...",
     remote = "https://github.com/iceb0y/boost.git",
 )
 
@@ -21,4 +21,4 @@ cc_binary(
 
 Pull requests to add more boost libraries are welcome.
 
-Currently pinned to boost-1.71.0. Tested under linux and Windows.
+Currently pinned to boost-1.73.0. Tested under linux and Windows.
