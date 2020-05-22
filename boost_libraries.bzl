@@ -219,6 +219,14 @@ BOOST_LIBRARIES = [
     ),
 
     boost_library(
+        name = "functional",
+        deps = [
+            "config",
+            "utility",
+        ],
+    ),
+
+    boost_library(
         name = "fusion",
         deps = [
             "typeof",
@@ -249,6 +257,10 @@ BOOST_LIBRARIES = [
 
     boost_library(
         name = "integer",
+        deps = [
+            "config",
+            "static_assert",
+        ],
     ),
 
     boost_library(
@@ -378,6 +390,24 @@ BOOST_LIBRARIES = [
     ),
 
     boost_library(
+        name = "multiprecision",
+        deps = [
+            "assert",
+            "config",
+            "core",
+            "functional",
+            "lexical_cast",
+            "math",
+            "mpl",
+            "rational",
+            "smart_ptr",
+            "throw_exception",
+            "type_traits",
+            "utility",
+        ],
+    ),
+
+    boost_library(
         name = "numeric_conversion",
     ),
 
@@ -483,6 +513,18 @@ BOOST_LIBRARIES = [
     boost_library(
         name = "ratio",
         deps = ["integer"],
+    ),
+
+    boost_library(
+        name = "rational",
+        deps = [
+            "assert",
+            "integer",
+            "static_assert",
+            "throw_exception",
+            "type_traits",
+            "utility",
+        ],
     ),
 
     boost_library(
