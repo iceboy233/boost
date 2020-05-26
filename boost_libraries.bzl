@@ -104,6 +104,16 @@ BOOST_LIBRARIES = [
 
     boost_library(
         name = "circular_buffer",
+        deps = [
+            "concept_check",
+            "config",
+            "core",
+            "move",
+            "preprocessor",
+            "static_assert",
+            "throw_exception",
+            "type_traits",
+        ],
     ),
 
     boost_library(
