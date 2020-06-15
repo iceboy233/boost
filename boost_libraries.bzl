@@ -278,6 +278,17 @@ BOOST_LIBRARIES = [
     ),
 
     boost_library(
+        name = "interprocess",
+        deps = [
+            "config",
+            "date_time",
+            "detail",
+            "unordered",
+            "winapi",
+        ],
+    ),
+
+    boost_library(
         name = "intrusive",
     ),
 
@@ -701,6 +712,10 @@ BOOST_LIBRARIES = [
 
     boost_library(
         name = "typeof",
+    ),
+
+    boost_library(
+        name = "unordered",
     ),
 
     boost_library(
