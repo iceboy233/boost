@@ -6,7 +6,7 @@ WORKSPACE file:
 git_repository(
     name = "org_boost_boost",
     commit = "...",
-    remote = "https://github.com/iceb0y/boost.git",
+    remote = "https://github.com/iceboy233/boost.git",
 )
 
 And then you can reference to individual boost libraries like:
