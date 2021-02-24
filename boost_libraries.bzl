@@ -178,6 +178,15 @@ BOOST_LIBRARIES = [
     ),
 
     boost_library(
+        name = "endian",
+        deps = [
+            "config",
+            "core",
+            "type_traits",
+        ],
+    ),
+
+    boost_library(
         name = "exception",
     ),
 
