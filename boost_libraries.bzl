@@ -207,6 +207,7 @@ BOOST_LIBRARIES = [
         ],
         defines = ["BOOST_FILESYSTEM_NO_CXX20_ATOMIC_REF"],
         deps = [
+            "atomic",
             "config",
             "container_hash",
             "io",
