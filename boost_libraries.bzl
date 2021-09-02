@@ -55,6 +55,7 @@ BOOST_LIBRARIES = [
     boost_library(
         name = "asio",
         deps = [
+            "align",
             "bind",
             "config",
             "date_time",
