@@ -7,7 +7,7 @@ def boost_library(
     deps = None):
     return {
         'name': name,
-        'version': 'boost-1.75.0',
+        'version': 'boost-1.77.0',
         'srcs': srcs,
         'textual_hdrs': textual_hdrs,
         'defines': (defines or []) + ["BOOST_ALL_NO_LIB"],
@@ -55,6 +55,7 @@ BOOST_LIBRARIES = [
     boost_library(
         name = "asio",
         deps = [
+            "align",
             "bind",
             "config",
             "date_time",
@@ -204,7 +205,9 @@ BOOST_LIBRARIES = [
             "src/utf8_codecvt_facet.cpp",
             "src/windows_file_codecvt.cpp",
         ],
+        defines = ["BOOST_FILESYSTEM_NO_CXX20_ATOMIC_REF"],
         deps = [
+            "atomic",
             "config",
             "container_hash",
             "io",
