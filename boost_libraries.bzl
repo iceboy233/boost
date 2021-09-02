@@ -205,6 +205,7 @@ BOOST_LIBRARIES = [
             "src/utf8_codecvt_facet.cpp",
             "src/windows_file_codecvt.cpp",
         ],
+        defines = ["BOOST_FILESYSTEM_NO_CXX20_ATOMIC_REF"],
         deps = [
             "config",
             "container_hash",
