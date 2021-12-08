@@ -1,6 +1,6 @@
 This repository contains the boost library with bazel build rules.
 
-We recommend using this repository by adding a git_repository rule in your
+We recommend using this repository by adding the following rules in your
 WORKSPACE file:
 
 git_repository(
@@ -8,6 +8,9 @@ git_repository(
     commit = "...",
     remote = "https://github.com/iceboy233/boost.git",
 )
+
+load("@org_boost_boost//:boost_deps.bzl", "boost_deps")
+boost_deps()
 
 And then you can reference to individual boost libraries like:
 
