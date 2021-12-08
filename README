@@ -8,6 +8,7 @@ git_repository(
     commit = "...",
     remote = "https://github.com/iceboy233/boost.git",
 )
+
 load("@org_boost_boost//:boost_deps.bzl", "boost_deps")
 boost_deps()
 
