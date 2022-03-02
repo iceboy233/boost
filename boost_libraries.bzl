@@ -100,7 +100,12 @@ BOOST_LIBRARIES = [
 
     boost_library(
         name = "chrono",
-        deps = ["ratio"],
+        defines = ["BOOST_CHRONO_HEADER_ONLY"],
+        deps = [
+            "mpl",
+            "ratio",
+            "type_traits",
+        ],
     ),
 
     boost_library(
@@ -692,6 +697,23 @@ BOOST_LIBRARIES = [
         deps = [
             "assert",
             "config",
+        ],
+    ),
+
+    boost_library(
+        name = "timer",
+        srcs = [
+            "src/auto_timers_construction.cpp",
+            "src/cpu_timer.cpp",
+        ],
+        deps = [
+            "config",
+            "core",
+            "chrono",
+            "io",
+            "predef",
+            "throw_exception",
+            "system",
         ],
     ),
 
