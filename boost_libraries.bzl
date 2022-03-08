@@ -124,6 +124,7 @@ BOOST_LIBRARIES = [
     boost_library(
         name = "config",
     ),
+    
 
     boost_library(
         name = "container",
@@ -147,6 +148,19 @@ BOOST_LIBRARIES = [
             "detail",
             "integer",
             "type_traits",
+        ],
+    ),
+
+    boost_library(
+        name = "conversion",
+        deps = [
+            "assert",
+            "config",
+            "core",
+            "smart_ptr",
+            "throw_exception",
+            "type_traits",
+            "typeof",
         ],
     ),
 
@@ -592,6 +606,28 @@ BOOST_LIBRARIES = [
     ),
 
     boost_library(
+        name = "signals2",
+        deps = [
+            "assert",
+            "bind",
+            "config",
+            "core",
+            "function",
+            "iterator",
+            "mpl",
+            "optional",
+            "parameter",
+            "predef",
+            "preprocessor",
+            "smart_ptr",
+            "throw_exception",
+            "tuple",
+            "type_traits",
+            "variant",
+        ],
+    ),
+
+    boost_library(
         name = "smart_ptr",
         deps = [
             "core",
@@ -617,6 +653,24 @@ BOOST_LIBRARIES = [
             "type_traits",
             "utility",
             "variant",
+        ],
+    ),
+
+    boost_library(
+        name = "statechart",
+        deps = [
+            "assert",
+            "bind",
+            "config",
+            "conversion",
+            "core",
+            "detail",
+            "function",
+            "mpl",
+            "smart_ptr",
+            "static_assert",
+            "thread",
+            "type_traits",
         ],
     ),
 
