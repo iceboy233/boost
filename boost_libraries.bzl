@@ -657,11 +657,6 @@ BOOST_LIBRARIES = [
     ),
 
     boost_library(
-        name = "static_assert",
-        deps = ["config"]
-    ),
-
-    boost_library(
         name = "statechart",
         deps = [
             "assert",
@@ -677,6 +672,11 @@ BOOST_LIBRARIES = [
             "thread",
             "type_traits",
         ],
+    ),
+
+    boost_library(
+        name = "static_assert",
+        deps = ["config"]
     ),
 
     boost_library(
