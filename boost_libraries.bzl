@@ -58,6 +58,7 @@ BOOST_LIBRARIES = [
             "align",
             "bind",
             "config",
+            "coroutine",
             "date_time",
             "regex",
             "system",
@@ -151,8 +152,39 @@ BOOST_LIBRARIES = [
     ),
 
     boost_library(
+        name = "context",
+        # TODO(iceboy): Support other platforms.
+        srcs = select({
+            "@bazel_tools//src/conditions:linux_x86_64": [
+                "src/asm/jump_x86_64_sysv_elf_gas.S",
+                "src/asm/make_x86_64_sysv_elf_gas.S",
+                "src/asm/ontop_x86_64_sysv_elf_gas.S",
+            ],
+            "@bazel_tools//src/conditions:windows": [
+                "src/asm/jump_x86_64_ms_pe_masm.S",
+                "src/asm/make_x86_64_ms_pe_masm.S",
+                "src/asm/ontop_x86_64_ms_pe_masm.S",
+            ],
+        }),
+    ),
+
+    boost_library(
         name = "core",
         deps = ["config"],
+    ),
+
+    boost_library(
+        name = "coroutine",
+        srcs = [
+            "src/detail/coroutine_context.cpp",
+            "src/posix/stack_traits.cpp",
+        ],
+        deps = [
+            "assert",
+            "config",
+            "context",
+            "thread",
+        ],
     ),
 
     boost_library(
