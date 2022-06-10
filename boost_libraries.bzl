@@ -203,6 +203,15 @@ BOOST_LIBRARIES = [
 
     boost_library(
         name = "exception",
+        deps = [
+            "assert",
+            "config",
+            "core",
+            "smart_ptr",
+            "throw_exception",
+            "tuple",
+            "type_traits",
+        ],
     ),
 
     boost_library(
@@ -324,6 +333,21 @@ BOOST_LIBRARIES = [
             "detail",
             "mpl",
             "type_traits",
+        ],
+    ),
+
+    boost_library(
+        name = "json",
+        deps = [
+            "align",
+            "assert",
+            "config",
+            "container",
+            "exception",
+            "mp11",
+            "system",
+            "throw_exception",
+            "utility",
         ],
     ),
 
