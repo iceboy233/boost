@@ -338,6 +338,9 @@ BOOST_LIBRARIES = [
 
     boost_library(
         name = "json",
+        srcs = [
+            "src/src.cpp",
+        ],
         deps = [
             "align",
             "assert",
