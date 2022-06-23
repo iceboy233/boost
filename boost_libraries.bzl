@@ -1,18 +1,18 @@
 def boost_library(
-    name,
-    srcs = None,
-    textual_hdrs = None,
-    defines = None,
-    linkopts = None,
-    deps = None):
+        name,
+        srcs = None,
+        textual_hdrs = None,
+        defines = None,
+        linkopts = None,
+        deps = None):
     return {
-        'name': name,
-        'version': 'boost-1.79.0',
-        'srcs': srcs,
-        'textual_hdrs': textual_hdrs,
-        'defines': (defines or []) + ["BOOST_ALL_NO_LIB"],
-        'linkopts': linkopts,
-        'deps': deps or [],
+        "name": name,
+        "version": "boost-1.79.0",
+        "srcs": srcs,
+        "textual_hdrs": textual_hdrs,
+        "defines": (defines or []) + ["BOOST_ALL_NO_LIB"],
+        "linkopts": linkopts,
+        "deps": deps or [],
     }
 
 BOOST_LIBRARIES = [
@@ -27,7 +27,6 @@ BOOST_LIBRARIES = [
             "static_assert",
         ],
     ),
-
     boost_library(
         name = "align",
         deps = [
@@ -38,7 +37,6 @@ BOOST_LIBRARIES = [
             "throw_exception",
         ],
     ),
-
     boost_library(
         name = "any",
         deps = [
@@ -46,12 +44,10 @@ BOOST_LIBRARIES = [
             "type_index",
         ],
     ),
-
     boost_library(
         name = "array",
         deps = ["throw_exception"],
     ),
-
     boost_library(
         name = "asio",
         deps = [
@@ -68,11 +64,9 @@ BOOST_LIBRARIES = [
             "//conditions:default": ["-pthread"],
         }),
     ),
-
     boost_library(
         name = "assert",
     ),
-
     boost_library(
         name = "atomic",
         deps = [
@@ -81,7 +75,6 @@ BOOST_LIBRARIES = [
             "type_traits",
         ],
     ),
-
     boost_library(
         name = "beast",
         deps = [
@@ -93,16 +86,13 @@ BOOST_LIBRARIES = [
         ],
         defines = ["BOOST_BEAST_USE_STD_STRING_VIEW"],
     ),
-
     boost_library(
         name = "bind",
     ),
-
     boost_library(
         name = "chrono",
         deps = ["ratio"],
     ),
-
     boost_library(
         name = "circular_buffer",
         deps = [
@@ -116,16 +106,12 @@ BOOST_LIBRARIES = [
             "type_traits",
         ],
     ),
-
     boost_library(
         name = "concept_check",
     ),
-
     boost_library(
         name = "config",
     ),
-    
-
     boost_library(
         name = "container",
         deps = [
@@ -139,7 +125,6 @@ BOOST_LIBRARIES = [
             "type_traits",
         ],
     ),
-
     boost_library(
         name = "container_hash",
         deps = [
@@ -150,7 +135,6 @@ BOOST_LIBRARIES = [
             "type_traits",
         ],
     ),
-
     boost_library(
         name = "conversion",
         deps = [
@@ -163,12 +147,10 @@ BOOST_LIBRARIES = [
             "typeof",
         ],
     ),
-
     boost_library(
         name = "core",
         deps = ["config"],
     ),
-
     boost_library(
         name = "date_time",
         srcs = [
@@ -187,11 +169,9 @@ BOOST_LIBRARIES = [
             "utility",
         ],
     ),
-
     boost_library(
         name = "detail",
     ),
-
     boost_library(
         name = "endian",
         deps = [
@@ -200,7 +180,6 @@ BOOST_LIBRARIES = [
             "type_traits",
         ],
     ),
-
     boost_library(
         name = "exception",
         deps = [
@@ -213,7 +192,6 @@ BOOST_LIBRARIES = [
             "type_traits",
         ],
     ),
-
     boost_library(
         name = "filesystem",
         srcs = [
@@ -241,15 +219,12 @@ BOOST_LIBRARIES = [
             "type_traits",
         ],
     ),
-
     boost_library(
         name = "foreach",
     ),
-
     boost_library(
         name = "format",
     ),
-
     boost_library(
         name = "function",
         deps = [
@@ -258,11 +233,9 @@ BOOST_LIBRARIES = [
             "type_index",
         ],
     ),
-
     boost_library(
         name = "function_types",
     ),
-
     boost_library(
         name = "functional",
         deps = [
@@ -270,14 +243,12 @@ BOOST_LIBRARIES = [
             "utility",
         ],
     ),
-
     boost_library(
         name = "fusion",
         deps = [
             "typeof",
         ],
     ),
-
     boost_library(
         name = "hana",
         deps = [
@@ -288,7 +259,6 @@ BOOST_LIBRARIES = [
             "tuple",
         ],
     ),
-
     boost_library(
         name = "icl",
         deps = [
@@ -299,7 +269,6 @@ BOOST_LIBRARIES = [
             "range",
         ],
     ),
-
     boost_library(
         name = "integer",
         deps = [
@@ -307,11 +276,9 @@ BOOST_LIBRARIES = [
             "static_assert",
         ],
     ),
-
     boost_library(
         name = "io",
     ),
-
     boost_library(
         name = "interprocess",
         deps = [
@@ -322,11 +289,9 @@ BOOST_LIBRARIES = [
             "winapi",
         ],
     ),
-
     boost_library(
         name = "intrusive",
     ),
-
     boost_library(
         name = "iterator",
         deps = [
@@ -335,7 +300,6 @@ BOOST_LIBRARIES = [
             "type_traits",
         ],
     ),
-
     boost_library(
         name = "json",
         srcs = [
@@ -353,7 +317,6 @@ BOOST_LIBRARIES = [
             "utility",
         ],
     ),
-
     boost_library(
         name = "lexical_cast",
         deps = [
@@ -365,11 +328,9 @@ BOOST_LIBRARIES = [
             "range",
         ],
     ),
-
     boost_library(
         name = "locale",
     ),
-
     boost_library(
         name = "lockfree",
         deps = [
@@ -389,7 +350,6 @@ BOOST_LIBRARIES = [
             "utility",
         ],
     ),
-
     boost_library(
         name = "log",
         srcs = [
@@ -428,16 +388,13 @@ BOOST_LIBRARIES = [
             "thread",
         ],
     ),
-
     boost_library(
         name = "logic",
     ),
-
     boost_library(
         name = "math",
         deps = ["predef"],
     ),
-
     boost_library(
         name = "move",
         deps = [
@@ -445,11 +402,9 @@ BOOST_LIBRARIES = [
             "static_assert",
         ],
     ),
-
     boost_library(
         name = "mp11",
     ),
-
     boost_library(
         name = "mpl",
         deps = [
@@ -457,12 +412,10 @@ BOOST_LIBRARIES = [
             "preprocessor",
         ],
     ),
-
     boost_library(
         name = "multi_index",
         deps = ["serialization"],
     ),
-
     boost_library(
         name = "multiprecision",
         deps = [
@@ -480,11 +433,9 @@ BOOST_LIBRARIES = [
             "utility",
         ],
     ),
-
     boost_library(
         name = "numeric_conversion",
     ),
-
     boost_library(
         name = "optional",
         deps = [
@@ -497,11 +448,18 @@ BOOST_LIBRARIES = [
             "utility",
         ],
     ),
-
+    boost_library(
+        name = "outcome",
+        deps = [
+            "config",
+            "exception",
+            "system",
+            "throw_exception",
+        ],
+    ),
     boost_library(
         name = "parameter",
     ),
-
     boost_library(
         name = "phoenix",
         deps = [
@@ -509,15 +467,12 @@ BOOST_LIBRARIES = [
             "proto",
         ],
     ),
-
     boost_library(
         name = "predef",
     ),
-
     boost_library(
         name = "preprocessor",
     ),
-
     boost_library(
         name = "process",
         deps = [
@@ -525,7 +480,6 @@ BOOST_LIBRARIES = [
             "filesystem",
         ],
     ),
-
     boost_library(
         name = "program_options",
         srcs = [
@@ -547,7 +501,6 @@ BOOST_LIBRARIES = [
             "tokenizer",
         ],
     ),
-
     boost_library(
         name = "property_tree",
         deps = [
@@ -556,11 +509,9 @@ BOOST_LIBRARIES = [
             "multi_index",
         ],
     ),
-
     boost_library(
         name = "proto",
     ),
-
     boost_library(
         name = "range",
         deps = [
@@ -583,12 +534,10 @@ BOOST_LIBRARIES = [
             "utility",
         ],
     ),
-
     boost_library(
         name = "ratio",
         deps = ["integer"],
     ),
-
     boost_library(
         name = "rational",
         deps = [
@@ -600,7 +549,6 @@ BOOST_LIBRARIES = [
             "utility",
         ],
     ),
-
     boost_library(
         name = "random",
         srcs = [
@@ -623,15 +571,12 @@ BOOST_LIBRARIES = [
             "utility",
         ],
     ),
-
     boost_library(
         name = "regex",
     ),
-
     boost_library(
         name = "serialization",
     ),
-
     boost_library(
         name = "signals2",
         deps = [
@@ -653,7 +598,6 @@ BOOST_LIBRARIES = [
             "variant",
         ],
     ),
-
     boost_library(
         name = "smart_ptr",
         deps = [
@@ -662,7 +606,6 @@ BOOST_LIBRARIES = [
             "throw_exception",
         ],
     ),
-
     boost_library(
         name = "spirit",
         deps = [
@@ -682,7 +625,6 @@ BOOST_LIBRARIES = [
             "variant",
         ],
     ),
-
     boost_library(
         name = "statechart",
         deps = [
@@ -700,12 +642,10 @@ BOOST_LIBRARIES = [
             "type_traits",
         ],
     ),
-
     boost_library(
         name = "static_assert",
-        deps = ["config"]
+        deps = ["config"],
     ),
-
     boost_library(
         name = "system",
         srcs = [
@@ -719,7 +659,6 @@ BOOST_LIBRARIES = [
             "winapi",
         ],
     ),
-
     boost_library(
         name = "thread",
         srcs = ["src/future.cpp"] + select({
@@ -767,7 +706,6 @@ BOOST_LIBRARIES = [
             "winapi",
         ],
     ),
-
     boost_library(
         name = "throw_exception",
         deps = [
@@ -775,19 +713,15 @@ BOOST_LIBRARIES = [
             "config",
         ],
     ),
-
     boost_library(
         name = "tokenizer",
     ),
-
     boost_library(
         name = "tti",
     ),
-
     boost_library(
         name = "tuple",
     ),
-
     boost_library(
         name = "type_index",
         deps = [
@@ -797,20 +731,16 @@ BOOST_LIBRARIES = [
             "throw_exception",
         ],
     ),
-
     boost_library(
         name = "type_traits",
         deps = ["static_assert"],
     ),
-
     boost_library(
         name = "typeof",
     ),
-
     boost_library(
         name = "unordered",
     ),
-
     boost_library(
         name = "utility",
         deps = [
@@ -820,7 +750,6 @@ BOOST_LIBRARIES = [
             "type_traits",
         ],
     ),
-
     boost_library(
         name = "variant",
         deps = [
@@ -829,7 +758,6 @@ BOOST_LIBRARIES = [
             "utility",
         ],
     ),
-
     boost_library(
         name = "winapi",
     ),
