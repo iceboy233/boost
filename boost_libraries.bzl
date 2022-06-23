@@ -524,7 +524,6 @@ BOOST_LIBRARIES = [
             "detail",
             "iterator",
             "mpl",
-            "numeric_conversion",
             "optional",
             "preprocessor",
             "regex",
