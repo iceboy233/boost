@@ -750,6 +750,26 @@ BOOST_LIBRARIES = [
         ],
     ),
     boost_library(
+        name = "uuid",
+        deps = [
+            "assert",
+            "config",
+            "container_hash",
+            "core",
+            "io",
+            "move",
+            "numeric_conversion",
+            "predef",
+            "random",
+            "serialization",
+            "static_assert",
+            "throw_exception",
+            "tti",
+            "type_traits",
+            "winapi",
+        ],
+    ),
+    boost_library(
         name = "variant",
         deps = [
             "move",
