@@ -24,4 +24,4 @@ cc_binary(
 
 Pull requests to add more boost libraries are welcome.
 
-Currently pinned to boost-1.79.0. Tested under linux and Windows.
+Currently pinned to boost-1.80.0. Tested under linux and Windows.
