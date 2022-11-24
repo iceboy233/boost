@@ -414,7 +414,10 @@ BOOST_LIBRARIES = [
     ),
     boost_library(
         name = "multi_index",
-        deps = ["serialization"],
+        deps = [
+            "foreach",
+            "serialization",
+        ],
     ),
     boost_library(
         name = "multiprecision",
