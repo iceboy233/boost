@@ -7,7 +7,7 @@ def boost_library(
         deps = None):
     return {
         "name": name,
-        "version": "boost-1.79.0",
+        "version": "boost-1.83.0",
         "srcs": srcs,
         "textual_hdrs": textual_hdrs,
         "defines": (defines or []) + ["BOOST_ALL_NO_LIB"],
@@ -128,10 +128,9 @@ BOOST_LIBRARIES = [
     boost_library(
         name = "container_hash",
         deps = [
-            "assert",
-            "core",
-            "detail",
-            "integer",
+            "config",
+            "describe",
+            "mp11",
             "type_traits",
         ],
     ),
@@ -171,6 +170,10 @@ BOOST_LIBRARIES = [
     ),
     boost_library(
         name = "detail",
+    ),
+    boost_library(
+        name = "describe",
+        deps = ["mp11"],
     ),
     boost_library(
         name = "endian",
