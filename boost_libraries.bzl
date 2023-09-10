@@ -683,8 +683,8 @@ BOOST_LIBRARIES = [
         deps = [
             "assert",
             "config",
-            "core",
-            "predef",
+            "throw_exception",
+            "variant2",
             "winapi",
         ],
     ),
@@ -802,9 +802,27 @@ BOOST_LIBRARIES = [
     boost_library(
         name = "variant",
         deps = [
-            "move",
+            "assert",
+            "config",
+            "container_hash",
+            "core",
+            "detail",
+            "integer",
+            "mpl",
+            "preprocessor",
+            "static_assert",
+            "throw_exception",
             "type_index",
+            "type_traits",
             "utility",
+        ],
+    ),
+    boost_library(
+        name = "variant2",
+        deps = [
+            "assert",
+            "config",
+            "mp11",
         ],
     ),
     boost_library(
