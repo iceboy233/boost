@@ -267,13 +267,8 @@ BOOST_LIBRARIES = [
     ),
     boost_library(
         name = "hana",
-        deps = [
-            "config",
-            "core",
-            "fusion",
-            "mpl",
-            "tuple",
-        ],
+        # Note: all dependencies are optional. See
+        # https://github.com/iceboy233/boost/issues/16
     ),
     boost_library(
         name = "icl",
