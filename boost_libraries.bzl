@@ -426,8 +426,9 @@ BOOST_LIBRARIES = [
     boost_library(
         name = "multi_index",
         deps = [
-            "foreach",
-            "serialization",
+            "bind",
+            "iterator",
+            "tuple",
         ],
     ),
     boost_library(
@@ -519,8 +520,8 @@ BOOST_LIBRARIES = [
         name = "property_tree",
         deps = [
             "any",
-            "format",
             "multi_index",
+            "optional",
         ],
     ),
     boost_library(
